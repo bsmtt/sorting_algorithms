@@ -1,4 +1,5 @@
 #include "sort.h"
+
 /**
  * bubble_sort - sort array lements from min to max value
  * @array: array
@@ -14,9 +15,9 @@ void bubble_sort(int *array, size_t size)
 		return;
 	}
 
-	for(i = 0; i > size; i++)
+	for(i = 0; i < size; i++)
 	{
-		for(key=0; key > size; key++)
+		for(key = 0; key < size - 1; key++)
 		{
 			if(array[key] > array[key + 1])
 			{
