@@ -22,21 +22,20 @@ tmp = *num1;
  */
 void selection_sort(int *array, size_t size)
 {
-int *min;
-size_t i, j;
+size_t i, j, min_index;
 
 if (!array || size < 2)
 return;
 
 for (i = 0; i < size - 1; i++)
 {
-min = array + i;
+min_index = i;
 for (j = i + 1; j < size; j++)
-min = (array[j] < *min) ? (array + j) : min;
+min_index = (array[j] < array[min_index]) ? j : min_index;
 
-if ((array + i) != min)
+if ((array + i) != array + min_index)
 {
-swap_items(array + i, min);
+swap_items(array + i, array + min_index);
 print_array(array, size);
 }
 }
