@@ -17,8 +17,8 @@ typedef struct listint_s
 	struct listint_s *next;
 } listint_t;
 
-int getPivot(int arr[], size_t low, size_t high, size_t size);
-void get_quick_sort(int *array, size_t low, size_t high, size_t size);
+int getPivot(int *array, size_t size, int left, int right);
+void get_quick_sort(int *array, size_t size, int left, int right);
 void quick_sort(int *array, size_t size);
 
 void selection_sort(int *array, size_t size);
