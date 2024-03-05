@@ -33,7 +33,7 @@ if (array[below] < *pivot)
 {
 if (above < below)
 {
-swap_ints(array + below, array + above);
+swap_items(array + below, array + above);
 print_array(array, size);
 }
 above++;
@@ -42,7 +42,7 @@ above++;
 
 if (array[above] > *pivot)
 {
-swap_ints(array + above, pivot);
+swap_items(array + above, pivot);
 print_array(array, size);
 }
 
