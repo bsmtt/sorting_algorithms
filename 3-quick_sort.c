@@ -1,6 +1,19 @@
 #include "sort.h"
 
 /**
+ * swap_items - Swap two numbers in array.
+ * @num1: The first integer to swap.
+ * @num2: The second integer to swap.
+ */
+void swap_items(int *num1, int *num2)
+{
+int tmp;
+
+tmp = *num1;
+*num1 = *num2;
+*num2 = tmp;
+}
+/**
  * getPivot - function that sorts an array of integers
  * in ascending order using the quick sort algorithm
  * @arr: an array of integers
