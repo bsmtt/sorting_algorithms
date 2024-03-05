@@ -19,8 +19,9 @@ if (arr[above] < arr[high])
 {
 if (arr[above] < arr[below])
 swap_items(arr + above, arr + above);
-below++;
+print_array(arr, size);
 }
+below++;
 }
 swap_items(arr + below, arr + high);
 return (below);
