@@ -24,7 +24,8 @@ tmp = *num1;
 */
 int getPivot(int *array, size_t left, size_t right, size_t size)
 {
-int *pivot, above, below;
+int *pivot;
+size_t above, below;
 
 pivot = array + right;
 for (above = below = left; below < right; below++)
