@@ -31,7 +31,8 @@ for (i = 0; i < size - 1; i++)
 {
 min_index = i;
 for (j = i + 1; j < size; j++)
-min_index = (array[j] < array[min_index]) ? j : min_index;
+if (array[j] < array[min_index])
+min_index = j;
 
 if ((array + i) != array + min_index)
 {
