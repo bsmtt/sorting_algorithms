@@ -22,24 +22,31 @@ tmp = *num1;
  * @size: size of array
  *Return: return pivot index
 */
-int getPivot(int arr[], size_t low, size_t high, size_t size)
+int getPivot(int *array, int left, int right, size_t size)
 {
-size_t above, below = low;
+int *pivot, above, below;
 
-for (above = low; above <= high; above++)
+pivot = array + right;
+for (above = below = left; below < right; below++)
 {
-if (arr[above] < arr[high])
+if (array[below] < *pivot)
 {
-if (arr[above] < arr[below])
+if (above < below)
 {
-swap_items(arr + above, arr + above);
-print_array(arr, size);
+swap_ints(array + below, array + above);
+print_array(array, size);
 }
-below++;
+above++;
 }
 }
-swap_items(arr + below, arr + high);
-return (below);
+
+if (array[above] > *pivot)
+{
+swap_ints(array + above, pivot);
+print_array(array, size);
+}
+
+return (above);
 }
 /**
  * get_quick_sort - sort partition
