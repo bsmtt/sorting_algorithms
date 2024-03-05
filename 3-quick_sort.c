@@ -22,7 +22,7 @@ tmp = *num1;
  * @size: size of array
  *Return: return pivot index
 */
-int getPivot(int *array, int left, int right, size_t size)
+int getPivot(int *array, size_t left, size_t right, size_t size)
 {
 int *pivot, above, below;
 
