@@ -50,13 +50,13 @@ void get_quick_sort(int *array, size_t low, size_t high, size_t size)
 {
 size_t pivot_index;
 
-if (low >= high)
-return;
-
+if (low < high)
+{
 pivot_index = getPivot(array, low, high, size);
 
 get_quick_sort(array, low, pivot_index - 1, size);
 get_quick_sort(array, pivot_index + 1, high, size);
+}
 }
 /**
  * quick_sort - function that sorts an array of integers
